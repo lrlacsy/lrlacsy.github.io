@@ -3,6 +3,31 @@
 <head>
     <title> Exercise 1 </title>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script>
+    function togglePage(){
+        //get items
+        var name = ["cssub", "gesub", "proglang", "food", "hobbies", "dream"];
+        var grp = {};
+
+        for(var i = 0, l = name.length; i < l; i++){
+            grp[name[i]] = document.getElementById(name[i]);
+        }
+
+        for(var i = 0, l = name.length; i < l; i++){
+                if (grp[name[i]].classList.contains('show')){
+                    grp[name[i]].classList.replace('show','hide');
+                } else {
+                    grp[name[i]].classList.replace('hide','show');
+                }
+                if(grp[name[i]].classList.contains('fade')){
+                    grp[name[i]].classList.replace('fade','stat');
+                } else {
+                    grp[name[i]].classList.add('stat');
+                }
+        }    
+    }
+
+    </script>
 
 </head>
 <body>
@@ -12,30 +37,39 @@
 
     <div class="main grid-cont">
         <div class="bg"></div>
+        <div onclick="togglePage()" class="btn fade" id="btn-next"><button>next ⦢</button></div>
 
-        <div class="name grid-item typewriter">
+        <div class="name typewriter">
             <h1 class="fade">Name</h1>
             <p>Lyle Lacsamana</p>
         </div>
-        <div class="nickname grid-item typewriter">
+        <div class="nickname typewriter">
             <h1 class="fade">Nickname</h1>
             <p>Nico/Lyle</p>
         </div>
-        <div class="cssub grid-item fade">
+        <div class="cssub fade show" id="cssub">
             <h1>Favorite CMSC Subject</h1>
             <p><span>CMSC 150</span> Although the problems you provide solutions for in R are the difficult mathematics kind, I enjoyed how simple the operations are and the syntax it uses makes it easy to translate your solutions from paper to screen.</p>
         </div>
-        <div class="gesub grid-item fade">
+        <div class="gesub fade show" id="gesub">
             <h1>Favorite GE Subject</h1>
             <p><span>Ethics 1</span> I like answering philosophical questions and pondering on people's views on morality and humanity itself. I also haven't got the chance to enroll in other GE subjects since I entered the University so I don't have much of a choice here :) Still tho, shout out to <b>Sir Jet!</b></p>
         </div>
-        <div class="proglang grid-item fade">
+        <div class="proglang fade show" id="proglang">
             <h1>Favorite Programming Language</h1>
             <p><span>R Programming</span> As I've mentioned above, I love the simplicity but effectiveness of the language itself. It is very powerful if you know how to work your way and familiarize yourself with its ins and outs. <b>Overall: 10/10 PL, would use again.</b></p>
         </div>
-        <div class="food grid-item fade">
+        <div class="food fade show" id="food">
             <h1>Favorite Food</h1>
             <p><span>Sushi</span> + Japanese Cuisine in general. I just love everything about their palette, from fine dining to street food. They just hit all the right spots. <b>Hands Down to them for making the world a better place with their immaculate taste.</b></p>
+        </div>
+        <div class="hobbies hide" id="hobbies">
+            <h1>Hobbies</h1>
+            <p><span>I like writing and producing music. In my spare time I dabble in painting, writing poetry, reading comics, and ofcourse day drinking (actually any time of day tbh) :)</span></p>
+        </div>
+        <div class="dream hide" id="dream">
+            <h1>Childhood Dream</h1>
+            <p>I originally wanted to be an astronaut. Then a soldier. Then a scientist. Sadly, being an SD wasn't really one of them. Now, I just want to be a <b>PHROG.</b> Ribbit ribitting away. Although it's also nice to be rich. A rich phrog.</p>
         </div>
         
         <div class="marble"></div>

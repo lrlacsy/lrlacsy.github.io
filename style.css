@@ -36,6 +36,25 @@ body {
     color: #f1f1f1;
     height: 80vh;
 }
+.btn {
+    position: absolute;
+    z-index: 50;
+    top: 20vh;
+    right: 10vw;
+}
+.btn button:hover{
+    cursor: pointer;
+    color: #38ca3a;
+    transition-duration: .25s;
+}
+.btn button {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 800;
+    color: #f1f1f1;
+    background-color: transparent;
+    font-size: 2.8em;
+    border: 0px;
+}
 .main h1 {
     font-family: 'Syne', sans-serif;
     margin: 0;
@@ -45,6 +64,9 @@ body {
     font-family: 'DM Sans', sans-serif;
     margin: 0;
     width: 70%;
+}
+.main span {
+    font-size: 1.15em
 }
 .top {
     height: 7vh;
@@ -60,7 +82,7 @@ body {
 .grid-cont {
     display: grid;
     grid-template-columns: 15% 42.5% 42.5%;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 5em 5em 1fr 1fr 1fr;
     gap: 1em;
 }
 .name h1 {
@@ -92,7 +114,20 @@ body {
     grid-row-start: 4;
     grid-column-start: 3;
 }
-
+.hobbies {
+    grid-row-start: 3;
+    grid-column-start: 2;
+}
+.dream {
+    grid-row-start: 3;
+    grid-column-start: 3;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
 .bg {
     position: absolute;
     z-index: -2;
@@ -125,6 +160,14 @@ body {
     transition-duration: .5s;
     cursor: default;
 }
+.stat {
+    animation: fade ease-out .8s;
+}
+.stat:hover {
+    color: #38ca3a;
+    transition-duration: .5s;
+    cursor: default;
+}
   
   /* The typing effect */
   @keyframes typing {
@@ -142,6 +185,10 @@ body {
   @keyframes fade-in {
     0% { opacity:0; }
     70% { opacity:0; }
+    100% { opacity:1; }
+  }
+  @keyframes fade {
+    0% { opacity:0; }
     100% { opacity:1; }
   }
 
