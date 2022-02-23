@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,600&family=Syne:wght@700&display=swap');
+
+/* 
+font-family: 'DM Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Syne', sans-serif;
+ */
+ body {
+    margin: 0;
+    background-color: hsl(0, 0%, 1%);
+    overflow: hidden;
+ }
+.screen {
+    background-image: url("resources/vhs.gif");
+    background-size: 100% auto;
+    background-blend-mode: overlay;
+    opacity: .25;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+ }
+.main {
+    color: #f1f1f1;
+    height: 80vh;
+}
+.main h1 {
+    font-family: 'Syne', sans-serif;
+    margin: 0;
+    font-size: 1.7em;
+}
+.main p {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    width: 70%;
+}
+.top {
+    height: 7vh;
+    /* background-image: url(resources/top.png); */
+    opacity: .2;
+}
+.btm {
+    height: 13vh;
+    /* background-image: url(resources/top.png); */
+    opacity: .5;
+}
+.grid-cont {
+    display: grid;
+    grid-template-columns: 15% 42.5% 42.5%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+}
+.name h1 {
+    font-size: 2em;
+}
+.nickname h1 {
+    font-size: 2em;
+}
+.nickname {
+    grid-row-start: 2;
+}
+.cssub {
+    grid-row-start: 3;
+    grid-column-start: 2;
+}
+.gesub {
+    grid-row-start: 3;
+    grid-column-start: 3;
+}
+.proglang {
+    grid-row-start: 4;
+    grid-column-start: 2;
+}
+.food {
+    grid-row-start: 4;
+    grid-column-start: 3;
+}
+
+.bg {
+    position: absolute;
+    z-index: -2;
+    height: 80vh;
+    width: 100vw;
+}
+.marble {
+    background-image: url(resources/marble.png);
+    height: 80vh;
+    width: 100vw;
+    z-index: -1;
+    position: absolute;
+}
